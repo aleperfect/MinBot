@@ -1,34 +1,24 @@
 /* ⚠ POR FAVOR NO MODIFIQUES NADA DE AQUÍ ⚠ */
 
-
 import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
 import fs from 'fs';
 const handler = async (m, {conn, usedPrefix, command}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language
-  const _translate = JSON.parse(fs.readFileSync(`./language/${idioma}.json`))
-  const tradutor = _translate.plugins.info_donar
-
   const name = await conn.getName(m.sender);
   const donar =`
 *┏ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━*
-*┇          「 ${tradutor.texto1[0]} 」*
+*┇          「 𝐃𝐎𝐍𝐀𝐑 」*
 *┣ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━*
-*┃ ${tradutor.texto1[1]} ${name}*
+*┃ 𝙷𝙾𝙻𝙰 ${name}*
 *┃*
-*┃ ${tradutor.texto1[2]}*
-*┃ ${tradutor.texto1[3]}*
+*┃ 👉🏻 𝙰𝚀𝚄𝙸 𝙰𝙻𝙶𝚄𝙽𝙾𝚂 𝙳𝙰𝚃𝙾𝚂*
+*┃ 𝙿𝙾𝚁 𝚂𝙸 𝙶𝚄𝚂𝚃𝙰𝚂 𝙰𝙿𝙾𝚈𝙰𝚁 :𝟹*
 *┃*
-*┃ ${tradutor.texto1[4]}* 
-*┃ ${tradutor.texto1[5]}*
-*┃ ${tradutor.texto1[6]}*
-*┃ ${tradutor.texto1[7]}* 
-*┃ ${tradutor.texto1[8]}*  
-*┃ ${tradutor.texto1[9]}* 
+*┃ ➤ 𝙱𝙴𝙽𝙴𝙵𝙸𝙲𝙸𝙰𝚁𝙸𝙾: 𝐀𝐥𝐞𝐢𝐳𝐧* 
+*┃ ➤ 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼: https://www.instagram.com/ale.izn_20
 *┃*
-*┃ ${tradutor.texto1[10]}* 
-*┃ ${tradutor.texto1[11]}* 
-*┃ ${tradutor.texto1[12]}* 
+*┃ 👉🏻 𝙲𝙾𝙽𝚃𝙰𝙲𝚃𝙰𝙼𝙴 𝚂𝙸 𝙽𝙴𝙲𝙴𝚂𝙸𝚃𝙰𝚂*
+*┃ 𝙼𝙰𝚂 𝙳𝙰𝚃𝙾𝚂 𝚈 𝙿𝙰𝚁𝙰 𝙰𝙶𝚁𝙰𝙳𝙴𝙲𝙴𝚁𝚃𝙴*
+*┃ wa.me/+51992621601*
 *┗ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━*
 `.trim();
   const aa = {quoted: m, userJid: conn.user.jid};
